@@ -20,7 +20,7 @@ const bookSchema = new Schema({
         required:true,
     },
     featured: {
-        type: String,
+        type: Boolean,
     },
 
 });
