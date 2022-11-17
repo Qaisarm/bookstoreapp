@@ -6,16 +6,16 @@ import Form from './Form';
 const BookDetail = () => {
     const [book, setBook] = useState();
 const router = useRouter();
-const id = router.query.id;
+const Id = router.query.id;
 console.log(router.query);
     useEffect(()=>{
-        getBookFromId(id)
+        getBookFromId(Id)
         .then((data) => setBook(data))
         .catch((err) => console.log(err));
-    }, [router.query.id]);
+    }, [Id]);
     console.log(book);
     const getFormData= (data) => {
-        updateBook(id,data)
+        updateBook(Id,data)
         .then((value)=> console.log(value))
         .then(() => {
             router.push("/");

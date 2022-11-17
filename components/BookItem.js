@@ -10,6 +10,7 @@ import {
   Snackbar,
   Alert
 } from "@mui/material";
+import Image from `next/image`;
 import Link from "next/link";
 import { deleteBook } from "../api-helpers/frontend/utils";
 import { useRouter } from "next/router";
@@ -39,14 +40,14 @@ const router =useRouter();
           width: "70px", padding:"2px"
         }}>Featured</div>
         )}
-        <img src={imageUrl} alt={title} width={"100%"} height="100%" />
+        <Image src={imageUrl} alt={title} width={"100%"} height="100%" />
       </div>
       <CardContent sx={{ width: "100%", height: "30%" }}>
         <Typography fontFamily={"Neucha"} gutterBottom variant="h5" component="div">
           {title}
         </Typography>
         <Typography fontFamily={"Neucha"}
-        fontSize= "22px"
+        fontSize= "18px"
         width="300px"
         variant="body2" color="text.secondary">
           {author}
