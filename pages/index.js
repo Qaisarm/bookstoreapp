@@ -27,7 +27,7 @@ await  connectToDb();
     props:{
       books: featuredBooks,
     },
-    //revalidate: 10,
+    revalidate: 1,
   };
 
 };
