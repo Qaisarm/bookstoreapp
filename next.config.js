@@ -3,4 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+module.exports = {
+  // time in seconds of no pages generating during static
+  // generation before timing out
+  staticPageGenerationTimeout: 10,
+  images: {
+    unoptimized: true,
+  },
+  pageExtensions: ["page.js"],
+}
