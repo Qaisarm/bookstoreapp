@@ -21,14 +21,13 @@ await  connectToDb();
   }
   const result = JSON.stringify(books);
   const data = JSON.parse(result);
-
+  
   const featuredBooks = data.filter((book) => book.featured === true);
-
-  return{
+  return {
     props:{
       books: featuredBooks,
     },
-    revalidate: 10,
+    //revalidate: 10,
   };
 
 };
